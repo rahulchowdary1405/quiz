@@ -1,0 +1,119 @@
+<html>
+<head>
+<script>
+function myFunction() {
+    let g = document.getElementById("id1").value;
+    let g_reg = /^[a-zA-z]+\d{4}@vitstudent.ac.in$/;
+    if(g==""||g_reg.test(g)==false){
+        document.getElementById("demo1").innerHTML="*Email ID is Required";
+        document.getElementById("demo1").style. color = "red";
+        document.getElementById("demo1").style. fontSize =
+        "12px";
+        return false;
+    }
+    let f = document.getElementById("id2").value;
+    let f_reg = /^([a-z0-9][a-z]){3}[a-z0-9]$/i;
+    if(f==""||f_reg.test(f)==true){
+        document.getElementById("demo2").innerHTML="*Strong Password Is Required";
+        document.getElementById("demo2").style. color = "red";
+        document.getElementById("demo2").style. fontSize =
+        "12px";
+        return true;
+    }
+}
+</script>
+<style>
+@import url('https://fonts.cdnfonts.com/css/nordica-plus');
+body{
+background-image: linear-gradient(rgba(192, 217, 82, 0.721), white);
+}
+input[type=password] {  
+border-radius: 5px 5px 5px 5px;
+background-image: linear-gradient(rgba(112, 214, 214,0.849), white) ;
+color: black;
+height:25px;
+width:45%;
+}
+input[type=email] {
+border-radius: 5px 5px 5px 5px;
+background-image: linear-gradient(rgba(112, 214, 214,
+0.849), white) ;
+color: black;
+height:25px;
+width:45%;
+}
+middle{
+text-align:right;
+}
+#one{
+background-image: linear-gradient(white, rgba(131, 132, 62, 0.811));
+border-radius: 200px;
+color: black;
+padding: 5px 50px;
+text-align: center;
+display: inline-block;
+font-size: 10px;
+margin: 40px 60px 10px 200px;
+cursor: pointer;
+}
+
+.box
+{
+    text-align: center;
+    padding: 20px;
+    text-align: justify;
+    text-align-last: start;
+    width: 30%;
+    height: 30%;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 1px rgba(41, 40, 40, 0.676);
+    justify-content:center ;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: -100px;
+    margin-left: -250px;
+}
+.email
+{
+    width: 100px;
+    display: inline-block;
+    display: flex;
+    position: relative;
+}
+</head>
+<body>
+</style>
+<div class="top" style="text-align:center">
+<h1 style="font-size:60px;
+font-size: 60px;
+background: -webkit-linear-gradient(#000428ba , #0081f1cf);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+letter-spacing: 5px;
+margin-top:20px;
+border-width: 6px;
+border-style: solid;
+border-radius: 20px;
+border-color: black;
+font-family: Nordica Plus">
+<img src="https://www.freelogovectors.net/svg04/vitlogo.svg" width="6%" height="9%">&nbsp;VIT Entrance Test</h1>
+</div>
+</br>
+<div class = "box">
+    <br>    
+    <form name="myForm" action="instructions.html" onsubmit=" return myFunction()" method="post">
+    <label class="email11" for="email" >Email:<span style="margin-left:40px; "></span></label>
+    <input type="email" id="id1" name="email" placeholder="VIT Email" required><p id="demo1"></p>
+    <label for="paswd">Password:<span style="margin-left:15px;"></span></label>
+    <input type="password" id="id2" name="paswd" placeholder="Password" required><p id="demo2"></p>
+
+  <div class="vt">
+  <button id="Login" style="background-image:linear-gradient(rgba(101, 239, 101, 0.879), white)" >Login</button>
+  </form>
+</div>
+</div>
+</div>
+</body>
+</html>
